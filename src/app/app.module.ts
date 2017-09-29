@@ -14,6 +14,8 @@ import { AppAboutComponent } from './app-about/app-about.component';
 import { NewsComponent } from './news/news.component';
 import { NewsListComponent } from './news/news-list/news-list.component';
 import { NewsDetailComponent } from './news/news-detail/news-detail.component';
+import { OfferComponent } from './product/offer/offer.component';
+import { ControlPanelComponent } from './control-panel/control-panel.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +32,8 @@ import { NewsDetailComponent } from './news/news-detail/news-detail.component';
     NewsComponent,
     NewsListComponent,
     NewsDetailComponent,
+    OfferComponent,
+    ControlPanelComponent,
   ],
   imports: [
     BrowserModule
