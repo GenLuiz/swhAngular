@@ -1,5 +1,12 @@
+import { ProductService } from './product-service/product.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+
+
+
+// Imports for loading & configuring the in-memory web api
+import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { InMemoryDataService } from './in-memory-data/in-memory-data.service';
 
 import { AppComponent } from './app.component';
 import { AppNavComponent } from './app-nav/app-nav.component';
@@ -38,9 +45,10 @@ import { ImageSliderComponent } from './product/product-detail/image-slider/imag
     ImageSliderComponent,
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    InMemoryWebApiModule.forRoot(InMemoryDataService),
   ],
-  providers: [],
+  providers: [ProductService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
