@@ -16,6 +16,7 @@ import { NewsListComponent } from './news/news-list/news-list.component';
 import { NewsDetailComponent } from './news/news-detail/news-detail.component';
 import { OfferComponent } from './product/offer/offer.component';
 import { ControlPanelComponent } from './control-panel/control-panel.component';
+import { ImageSliderComponent } from './product/product-detail/image-slider/image-slider.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import { ControlPanelComponent } from './control-panel/control-panel.component';
     NewsDetailComponent,
     OfferComponent,
     ControlPanelComponent,
+    ImageSliderComponent,
   ],
   imports: [
     BrowserModule
