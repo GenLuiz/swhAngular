@@ -1,7 +1,6 @@
-import { ProductService } from './product-service/product.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { HttpModule }    from '@angular/http';
 
 
 // Imports for loading & configuring the in-memory web api
@@ -24,6 +23,7 @@ import { NewsDetailComponent } from './news/news-detail/news-detail.component';
 import { OfferComponent } from './product/offer/offer.component';
 import { ControlPanelComponent } from './control-panel/control-panel.component';
 import { ImageSliderComponent } from './product/product-detail/image-slider/image-slider.component';
+import { ProductService } from './product-service/product.service';
 
 @NgModule({
   declarations: [
@@ -46,7 +46,8 @@ import { ImageSliderComponent } from './product/product-detail/image-slider/imag
   ],
   imports: [
     BrowserModule,
-    InMemoryWebApiModule.forRoot(InMemoryDataService),
+    HttpModule,
+    InMemoryWebApiModule.forRoot(InMemoryDataService)
   ],
   providers: [ProductService],
   bootstrap: [AppComponent]
