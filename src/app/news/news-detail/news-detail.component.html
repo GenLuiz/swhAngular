@@ -1,5 +1,5 @@
 <!-- NEWS MODAL -->
-<div class="modal fade" id="post-01" role="dialog" tabindex="-1">
+<div class="container" id="{{newsDetail.id}}" role="dialog" tabindex="-1">
 	<div class="modal-dialog">
 		<!-- NEWS MODAL CONTENT -->
 		<div class="modal-content shadow">
@@ -7,40 +7,16 @@
 
 			<div class="modal-body">
 				<div class="post-entry post-entry-modal">
-					<h3 class="section-heading">Duis aute irure dolor in reprehenderit in voluptate.</h3>
+					<h3 class="section-heading">{{newsDetail.title}}</h3>
 
 					<span class="post-entry-meta">
-									<img alt="user avatar" class="post-entry-author pull-left" src="img/user.png">
-									<span class="post-entry-author-name pull-left">Alex Example</span>
-					<span class="post-entry-time pull-right">6 min read
-										<span class="post-entry-category">interior, furnitures</span>
-					</span>
+						<span class="post-entry-time pull-right">{{newsDetail.date}}</span>
 					</span>
 
 					<span class="post-entry-cover" style="background-image:url(img/blog-cover.jpg);"></span>
 
-					<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-						aliqua. Ut enim ad minim veniam, </p>
+					<p> {{newsDetail.description}}</p>
 
-					<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-						aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-						Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-						occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit
-						amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-						veniam, </p>
-
-					<p> quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
-						in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt
-						in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-						sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-						ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit
-						esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-						deserunt mollit anim id est laborum. </p>
-
-					<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-						aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-						Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-						occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
 				</div>
 			</div>
 		</div>

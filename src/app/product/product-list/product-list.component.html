@@ -9,7 +9,7 @@
 
 					<ul class="swiper-wrapper product-list product-list-vertical">
 						<!-- / PRODUCT LIST GOES HERE -->
-						<app-product *ngFor="let product of products"></app-product>
+						<app-product *ngFor="let product of products" [element]="product"></app-product>
 					</ul>
 
 					<!-- CAROUSEL CONTROLS -->
@@ -26,7 +26,7 @@
 			</div>
 		</div>
 		<!-- PRODUCT DETAIL GOES HERE -->
-		<app-product-detail></app-product-detail>
-		
+		<!--<app-product-detail></app-product-detail>-->
+		<!-- //PRODUCT DETAIL GOES HERE -->
 	</div>
 </section>

@@ -1,11 +1,15 @@
+
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpModule }    from '@angular/http';
+import { RouterModule }   from '@angular/router';
 
 
 // Imports for loading & configuring the in-memory web api
 import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService } from './in-memory-data/in-memory-data.service';
+
+import { AppRoutingModule } from './app-routing/app-routing.module';
 
 import { AppComponent } from './app.component';
 import { AppNavComponent } from './app-nav/app-nav.component';
@@ -24,6 +28,7 @@ import { OfferComponent } from './product/offer/offer.component';
 import { ControlPanelComponent } from './control-panel/control-panel.component';
 import { ImageSliderComponent } from './product/product-detail/image-slider/image-slider.component';
 import { ProductService } from './product-service/product.service';
+import { NewsService } from './news-service/news.service';
 
 @NgModule({
   declarations: [
@@ -47,9 +52,10 @@ import { ProductService } from './product-service/product.service';
   imports: [
     BrowserModule,
     HttpModule,
-    InMemoryWebApiModule.forRoot(InMemoryDataService)
+    InMemoryWebApiModule.forRoot(InMemoryDataService),
+    AppRoutingModule
   ],
-  providers: [ProductService],
+  providers: [ProductService, NewsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

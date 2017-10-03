@@ -1,4 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { News } from './../../models/news.model';
+import { Component, OnInit, Input } from '@angular/core';
+import { ActivatedRoute, ParamMap } from '@angular/router';
+import { Location }                 from '@angular/common';
+import 'rxjs/add/operator/switchMap';
+import { NewsService } from '../../news-service/news.service';
 
 @Component({
   selector: 'app-news-detail',
@@ -7,9 +12,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NewsDetailComponent implements OnInit {
 
-  constructor() { }
+  @Input() newsDetail: News;
 
-  ngOnInit() {
+  constructor(private newsService: NewsService, private route: ActivatedRoute, private location:Location) { }
+
+  ngOnInit():void {
+    this.route.paramMap.switchMap((params:ParamMap)=>this.newsService.getSingleNews(+params.get('id')))
+    .subscribe(news => this.newsDetail = news);
   }
 
 }

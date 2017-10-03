@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import {Router} from '@angular/router';
+import { News } from './../models/news.model';
 
 @Component({
   selector: 'app-news',
@@ -6,10 +8,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./news.component.css']
 })
 export class NewsComponent implements OnInit {
-
-  constructor() { }
+  
+  @Input() element: News;
+  
+  constructor(private router: Router) { }
 
   ngOnInit() {
   }
 
+  gotoDetail(element):void{
+    this.router.navigate(['/news-detail', this.element.id]);
+  }
 }
