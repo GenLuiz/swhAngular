@@ -1,26 +1,26 @@
-<!-- NEWS MODAL -->
-<div class="container" id="{{newsDetail.id}}" role="dialog" tabindex="-1">
-	<div class="modal-dialog">
-		<!-- NEWS MODAL CONTENT -->
-		<div class="modal-content shadow">
-			<a class="close" data-dismiss="modal"> <span class="ti-close"></span></a>
+<section class="section-min section">
+	<div class="container overflow-hidden">
+		<div class="row">
+			<div class="col-md-12">
+				<h3 class="section-heading">Detalhes do Produto</h3>
+			</div>
+			<div class="col-md-12">
 
-			<div class="modal-body">
-				<div class="post-entry post-entry-modal">
-					<h3 class="section-heading">{{newsDetail.title}}</h3>
+				<div class="modal-body">
+					<div class="post-entry post-entry-modal">
+						<h3 class="section-heading">{{newsDetail.title}}</h3>
 
-					<span class="post-entry-meta">
-						<span class="post-entry-time pull-right">{{newsDetail.date}}</span>
-					</span>
+						<span class="post-entry-meta">
+							<span class="post-entry-time pull-right">{{newsDetail.date}}</span>
+						</span>
 
-					<span class="post-entry-cover" style="background-image:url(img/blog-cover.jpg);"></span>
+						<span class="post-entry-cover" style="background-image:url(img/blog-cover.jpg);"></span>
 
-					<p> {{newsDetail.description}}</p>
+						<p> {{newsDetail.description}}</p>
 
+					</div>
 				</div>
 			</div>
 		</div>
-		<!-- / NEWS MODAL CONTENT -->
 	</div>
-</div>
-<!-- / NEWS MODAL -->
+</section>
