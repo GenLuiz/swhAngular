@@ -1,8 +1,10 @@
+import { NgModule } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
+
+import { ProductDetailComponent } from './../product/product-detail/product-detail.component';
 import { AppContactComponent } from './../app-contact/app-contact.component';
 import { NewsListComponent } from './../news/news-list/news-list.component';
 import { ProductListComponent } from './../product/product-list/product-list.component';
-import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
 import { NewsDetailComponent } from './../news/news-detail/news-detail.component';
 import { AppHomeComponent } from '../app-home/app-home.component';
 import { OfferComponent } from '../product/offer/offer.component';
@@ -33,6 +35,9 @@ const routes: Routes =[
     {
         path: 'news-detail/:id', component: NewsDetailComponent
     },
+    {
+        path: 'product-detail/:id', component: ProductDetailComponent
+    }
     
 ];
 
